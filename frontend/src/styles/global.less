@@ -1,0 +1,659 @@
+/* All styles (https://dev.to/hankchizljaw/a-modern-css-reset-6p3/) */
+
+/* Prevent adjustments of font size after orientation changes in iOS. */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Box sizing rules. Padding inside elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Make elements as blocks */
+main {
+  display: block;
+}
+
+/* Remove default color styles and change style of underline */
+/* (1) "text-decoration-skip-ink: auto" -> (https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-skip-ink) */
+a {
+  outline: none;
+  color: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  text-decoration: none;
+  /*text-decoration-skip-ink: auto; !* (1) *!*/
+}
+
+/* Make labels intuitive clickable */
+label {
+  cursor: pointer;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+
+figure {
+  display: inline-block;
+}
+
+/* Remove list styles on ul, padding, margin */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  display: list-item;
+}
+
+/* Reset default button styles */
+button {
+  padding: 0;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  background-color: transparent;
+}
+
+/* Remove default margins */
+p,
+li,
+body,
+figure,
+figcaption,
+blockquote,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Inherit fonts for inputs and buttons, remove controls */
+input,
+select,
+textarea {
+  padding: 14px 15px;
+  border: none;
+  resize: none;
+  cursor: text;
+  font: inherit;
+  outline: none;
+  overflow: hidden;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  text-indent: 1px;
+}
+
+/* Remove control arrows from input fields */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+/* Remove dropdown arrows from input fields */
+[list]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them (https://css-tricks.com/introduction-reduced-motion-media-query/) */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+html {
+  height: 100%; /* Commented out for correct working swiping of the FancyBox on IOS. */
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-content: stretch;
+  justify-content: stretch;
+  text-align: left;
+  scroll-behavior: smooth;
+  touch-action: manipulation;
+  text-rendering: optimizeSpeed;
+  font-size: 14px;
+  color: black;
+  line-height: 1.166 !important;
+  font-family: Roboto, sans-serif;
+  background-color: white;
+  -webkit-overflow-scrolling: touch;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  margin: 0 !important;
+}
+
+p,
+.p {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+h1,
+.h1 {
+  font-size: 36px;
+}
+
+h2,
+.h2 {
+  font-size: 24px;
+}
+
+h3,
+.h3 {
+  font-size: 16px;
+}
+
+h4,
+.h4,
+p,
+.p {
+  font-size: 14px;
+}
+
+h5,
+.h5 {
+  font-size: 12px;
+}
+
+h6,
+.h6 {
+  font-size: 10px;
+}
+
+sub {
+  display: inline-block;
+  vertical-align: baseline;
+  font-weight: normal;
+  font-size: 0.825em;
+  line-height: 1.6;
+}
+
+sup {
+  display: inline-block;
+  vertical-align: baseline;
+  font-weight: normal;
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+pre {
+  margin: 0;
+  font: inherit;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: pre-line;
+  word-break: break-word;
+}
+
+s {
+  display: inline-block;
+  text-decoration: inherit;
+}
+
+s:after {
+  content: "\00a0";
+}
+
+s.small:after {
+  content: "\2009";
+}
+
+b {
+  font-weight: bold;
+}
+
+br {
+  display: block;
+  height: 0;
+  content: "\00a0";
+  box-sizing: content-box;
+}
+
+br.tiny {
+  padding-bottom: 4px;
+}
+
+br.small {
+  padding-bottom: 8px;
+}
+
+br.medium,
+br {
+  padding-bottom: 16px;
+}
+
+br.big {
+  padding-bottom: 32px;
+}
+
+hr {
+  height: 1px;
+  margin: 0;
+  border: none;
+  box-sizing: content-box;
+  background-clip: content-box;
+}
+
+table td {
+  vertical-align: baseline;
+}
+
+/* ---------------------===================( Focus styles )===================--------------------- */
+
+a:not([class]):focus,
+button:not([class]):focus {
+  text-decoration: underline solid rgb(var(--color-info));
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:not([class]):focus {
+  border-color: rgb(var(--color-success));
+}
+
+::selection {
+  background-color: rgb(var(--color-info), 0.5);
+}
+
+/* ---------------------===================( Utils/Helpers )===================--------------------- */
+
+.page {
+  flex: 1 1 0;
+  overflow: hidden;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.first-letter {
+  display: inline-block;
+}
+
+.first-letter:first-letter {
+  text-transform: uppercase;
+}
+
+/* ----------=========( Background colors )=========----------- */
+.br-white {
+  background-color: white;
+}
+
+.bg-gray {
+  background-color: #d2d2d2;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-primary {
+  background-color: #1890ff;
+}
+
+/* ----------=========( Background size )=========----------- */
+.bg-cover {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-contain {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* ----------=========( Text colors )=========----------- */
+.color-white {
+  color: white;
+}
+
+.color-black {
+  color: black;
+}
+
+.color-primary {
+  color: #1890ff;
+}
+
+.color-gray {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.color-light-gray {
+  color: #b5b5b5;
+}
+
+/* ----------=========( Pointer events )=========----------- */
+.pointer-none {
+  pointer-events: none;
+}
+
+.pointer-auto {
+  pointer-events: auto;
+}
+
+/* ----------=========( Containers )=========----------- */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.full-container {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+/* ----------=========( Visibility )=========----------- */
+[hidden],
+.hidden {
+  display: none !important;
+}
+
+[zero],
+.zero {
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+[invisible],
+.invisible {
+  visibility: hidden !important;
+}
+
+/* ----------=========( Absolute )=========----------- */
+.full-absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ----------=========( Displaying )=========----------- */
+.flex {
+  display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+/* ----------=========( Font )=========----------- */
+.font-w-300 {
+  font-weight: 300;
+}
+
+.font-w-400,
+.font-w-normal {
+  font-weight: 400;
+}
+
+.font-w-500 {
+  font-weight: 500;
+}
+
+.font-w-600 {
+  font-weight: 600;
+}
+
+.font-w-700 {
+  font-weight: 700;
+}
+
+/* ----------=========( Scroll box )=========----------- */
+.scroll-box {
+  flex: 1 1 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-x-center {
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-x-center > * {
+  position: relative;
+  transform: translateZ(0);
+  scroll-snap-stop: always;
+  scroll-snap-align: center;
+}
+
+.scroll-y-center {
+  scroll-snap-type: y mandatory;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-y-center > * {
+  position: relative;
+  transform: translateZ(0);
+  scroll-snap-stop: always;
+  scroll-snap-align: center;
+}
+
+.body-scroll-lock #sapper {
+  opacity: 0.2;
+}
+
+/* ----------=========( Text align )=========----------- */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/* ----------=========( Flex )=========----------- */
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-none {
+  flex: none;
+}
+
+.flex-center {
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.flex-self-stretch {
+  align-self: stretch;
+}
+
+.flex-self-start {
+  align-self: flex-start;
+}
+
+.flex-self-end {
+  align-self: flex-end;
+}
+
+.flex-self-baseline {
+  align-self: baseline;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-justify-between {
+  justify-content: space-between;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+.flex-justify-start {
+  justify-content: flex-start;
+}
+
+.flex-justify-end {
+  justify-content: flex-end;
+}
+
+.flex-justify-around {
+  justify-content: space-around;
+}
+
+.flex-justify-stretch {
+  justify-content: stretch;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.flex-align-start {
+  align-items: flex-start;
+}
+
+.flex-align-end {
+  align-items: flex-end;
+}
+
+.flex-align-stretch {
+  align-items: stretch;
+}
+
+.flex-align-baseline {
+  align-items: baseline;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+/* ----------=========( Text )=========----------- */
+
+.text-ellipsis {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.text-ellipsis-multiline {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: var(--max-lines);
+  -webkit-box-orient: vertical;
+}
