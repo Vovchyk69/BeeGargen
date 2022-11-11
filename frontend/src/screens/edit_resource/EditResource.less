@@ -1,0 +1,46 @@
+@module: add-resource;
+
+.@{module} {
+  .ant-upload-list-item-thumbnail,
+  .ant-upload-list-item-image {
+    position: relative;
+    top: auto;
+    left: auto;
+    flex: none;
+    width: 120px !important;
+    height: 120px !important;
+    border-radius: @border-radius-base;
+    transform: translateZ(0);
+    overflow: hidden;
+  }
+
+  .ant-upload-list-item-info > span {
+    display: flex;
+  }
+
+  .ant-upload-list-item {
+    height: auto !important;
+    padding: 12px;
+  }
+
+  .ant-upload-list-item-name {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 0 0 0 10px;
+    margin: 0;
+    line-height: inherit;
+    white-space: normal;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
+  .ant-upload-list-item-card-actions {
+    top: 12px;
+    right: 5px;
+  }
+
+  .hasPhoto .ant-upload {
+    display: none;
+  }
+}

@@ -1,0 +1,43 @@
+@module: footer;
+
+.@{module} {
+  .ant-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+
+    &-submenu {
+      display: none;
+    }
+
+    &-item {
+      display: flex !important;
+      flex-direction: column;
+      align-content: stretch;
+      justify-content: stretch;
+      line-height: 20px;
+      font-size: 10px;
+      text-align: center;
+      padding: 0;
+
+      a {
+        color: #979797;
+        display: flex !important;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        padding: 15px 30px 10px;
+
+        &.active {
+          color: @primary-color;
+        }
+      }
+    }
+
+    .anticon {
+      margin: 0;
+      font-size: 28px;
+    }
+  }
+}
