@@ -6,7 +6,7 @@ A key strategy to work around this problem is to launch a child process, or a pr
 
 So we have been discussing the approach a couple of times and decided to apply this technique here. As adding media in a web service is the most important functionality, because the convenience of the service depends on it, we optimized it in such a way that the main Node.js process was not blocked by adding new media and could serve many users at the same time. That is, so that the user can simultaneously listen to existing media and add new ones in the background.
 
-To develop this method, the Event-Emitter design pattern was used. It is basic for Node.js applications and most system modules use it. It consists of an event emitter and an event handler. We also used the ability to create child processes in Node.js. This process is schematically shown in Fig. 2.3.2 and the part "Creating a background task".
+To develop this method, the Event-Emitter design pattern was used. It is basic for Node.js applications and most system modules use it. It consists of an event emitter and an event handler. We also used the ability to create child processes in Node.js. This process is schematically shown in Picture 3 in Architecture Document and the part "Creating a background task".
 
 This process consists of the following steps:
  - A request to create a new media is sent to the server.
