@@ -1,5 +1,11 @@
 # Heard
 
+## Team
+- Oleksii Pasternak (*oleksijpasternak*)- PM and partially BA, team's motivator. Workproducts: Project Plan, Wireframes and Prototypes 
+- Anna Pavliuk (*annpvk*) - QA. Workproducts: Functional, non-funtional test cases, Smoke suite, defect reports.
+- Ihor Medvid (*Ihorko01*) - AQA. Workproducts: sets of unit, integration, UI tests, defect reports.
+- Vovchyk Halamaha (*Vovchyk69*) - DEV. Workproducts: CI/CD
+
 ## Description
 Heard - a single-page application with a mobile layout that allows users to upload a picture of the page from the book, read generated text and listen to audio generated from picture. Before first using user must sign up with Google.
 ### How to use an App
