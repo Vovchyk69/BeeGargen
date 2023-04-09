@@ -3,7 +3,7 @@ name: Build and Deploy
 on:
   push:
     branches:
-      - main
+      - [main, dev-ci]
 
 jobs:
   build-and-deploy:
@@ -32,7 +32,7 @@ jobs:
 
       - name: Test Deployment
         run: npm run test
-        
+
       - name: Deploy to Staging
         uses: easingthemes/ssh-deploy@v2.2.6
         with:
