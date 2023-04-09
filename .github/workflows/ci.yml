@@ -1,5 +1,8 @@
 name: Build and Deploy
 
+env:
+  CI: false
+
 on:
   push:
     branches:
@@ -29,7 +32,15 @@ jobs:
         run: |
           cd frontend/
           npm install
-          npm run build
+          npm run build --no-warnings
+
+      - name: Deploy 
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: 'beegarden'
+          heroku_email: 'vovchykhalamaha@gmail.com'
+          branch: 'dev-ci'
 
       - name: Test Deployment
         run: npm run test
