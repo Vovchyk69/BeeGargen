@@ -8,6 +8,9 @@ const logger = require("./services/logger").child({ namespace: "app" });
 const passport = require("./services/passport.js");
 const session = require("express-session");
 const sessionStore = require("./services/session");
+const path = require('path');
+
+app.use(express.static(path.resolve(__dirname, '../frontend/build')));
 
 app.use(require("cookie-parser")());
 app.use((req, res, next) => {

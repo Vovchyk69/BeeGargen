@@ -14,8 +14,7 @@
     "start-js": "react-app-rewired start",
     "build": "react-app-rewired build",
     "start-build": "http-server ./build",
-    "eject": "react-app-rewired eject",
-    "heroku-postbuild": "npm install && npm run start"
+    "eject": "react-app-rewired eject"
   },
   "dependencies": {
     "@ant-design/icons": "^4.1.0",

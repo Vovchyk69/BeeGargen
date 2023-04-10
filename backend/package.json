@@ -1,12 +1,12 @@
 {
-  "name": "users-microservice",
+  "name": "beegarden-backend",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
     "start:debug": "nodemon --inspect index.js"
   },
-  "author": "Dmytro Harazdovskiy <harazdovskiy@gmail.com>",
+  "author": "Bee Garden Team",
   "license": "ISC",
   "dependencies": {
     "@google-cloud/storage": "^5.0.1",
