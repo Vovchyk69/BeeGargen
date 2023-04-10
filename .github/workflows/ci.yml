@@ -22,13 +22,13 @@ jobs:
         with:
           node-version: '14.x'
 
-      # - name: Deploy 
-      #   uses: akhileshns/heroku-deploy@v3.12.12
-      #   with:
-      #     heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-      #     heroku_app_name: 'beegarden'
-      #     heroku_email: 'vovchykhalamaha@gmail.com'
-      #     branch: 'dev-ci'
+      - name: Deploy 
+        uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: 'beegarden'
+          heroku_email: 'vovchykhalamaha@gmail.com'
+          branch: 'dev-ci'
 
       - name: Build Backend
         run: |
