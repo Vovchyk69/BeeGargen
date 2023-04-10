@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "start": "npm-run-all -p start-js",
+    "start": "react-app-rewired start",
     "prettier-watch": "onchange '**/*.tsx' '**/*.less' -- prettier --write {{changed}}",
     "stylelint-watch": "onchange '**/*.less' -- stylelint --fix {{changed}}",
     "stylelint-check": "stylelint-config-prettier-check",
