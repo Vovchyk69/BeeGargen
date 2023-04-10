@@ -24,6 +24,7 @@ let dbURI;
 
 if (process.env.ENV !== "test" && process.env.MONGODB_URI) {
   dbURI = process.env.MONGODB_URI.trim();
+  logger.warn(`This is db URI ${dbURI}`)
   connections.dbConnection.openUri(dbURI, dbOptions);
 } else {
   logger.warn("Connection string is not provided");
