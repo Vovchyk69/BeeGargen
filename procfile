@@ -1,2 +1,2 @@
-web: npm run start:backend && npm install
-api: npm run start:frontend && npm install
+web: npm run start:backend && npm install && npm run start
+api: npm run start:frontend && npm install && npm run start
