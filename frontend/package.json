@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "analyze": "source-map-explorer 'build/static/js/*.js'",
-    "start": "react-app-rewired build",
+    "start": "react-app-rewired start",
     "prettier-watch": "onchange '**/*.tsx' '**/*.less' -- prettier --write {{changed}}",
     "stylelint-watch": "onchange '**/*.less' -- stylelint --fix {{changed}}",
     "stylelint-check": "stylelint-config-prettier-check",
@@ -14,7 +14,8 @@
     "start-js": "react-app-rewired start",
     "build": "react-app-rewired build",
     "start-build": "http-server ./build",
-    "eject": "react-app-rewired eject"
+    "eject": "react-app-rewired eject",
+    "heroku-postbuild": "npm install && npm run build"
   },
   "dependencies": {
     "@ant-design/icons": "^4.1.0",
