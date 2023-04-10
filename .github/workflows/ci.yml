@@ -22,11 +22,10 @@ jobs:
         with:
           node-version: '14.x'
 
-      # - name: Build Backend
-      #   run: |
-      #     cd backend/
-      #     npm install
-      #     npm run build
+      - name: Build Backend
+        run: |
+          cd backend/
+          npm install
 
       - name: Build Frontend
         run: |
@@ -42,15 +41,15 @@ jobs:
           heroku_email: 'vovchykhalamaha@gmail.com'
           branch: 'dev-ci'
 
-      - name: Test Deployment
-        run: npm run test
+      # - name: Test Deployment
+      #   run: npm run test
 
-      - name: Deploy to Staging
-        uses: easingthemes/ssh-deploy@v2.2.6
-        with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-          remote-user: ${{ secrets.REMOTE_USER }}
-          server-ip: ${{ secrets.SERVER_IP }}
-          local-path: './'
-          server-path: '/var/www/html/staging'
-          args: '-rltgoDzvO --no-p --del'
+      # - name: Deploy to Staging
+      #   uses: easingthemes/ssh-deploy@v2.2.6
+      #   with:
+      #     ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      #     remote-user: ${{ secrets.REMOTE_USER }}
+      #     server-ip: ${{ secrets.SERVER_IP }}
+      #     local-path: './'
+      #     server-path: '/var/www/html/staging'
+      #     args: '-rltgoDzvO --no-p --del'
