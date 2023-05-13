@@ -11,7 +11,9 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run tests
-        run: cd frontend/ npm run test
+        run: |
+          cd backend/
+          npm run test
       - name: Upload coverage report
         uses: codecov/codecov-action@v1
         with:
