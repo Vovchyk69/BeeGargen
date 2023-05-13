@@ -10,7 +10,6 @@ on:
       - dev-ci
 
 jobs:
-  test:
   build-and-deploy:
     runs-on: ubuntu-latest
 
