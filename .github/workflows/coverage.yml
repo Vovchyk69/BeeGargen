@@ -1,9 +1,9 @@
-name: CI
+name: Coverage
 
 on: push
 
 jobs:
-  build:
+  Run Code Coverage🧑‍💻:
     runs-on: ubuntu-latest
 
     steps:

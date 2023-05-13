@@ -21,7 +21,7 @@
     "experimentalDecorators": true,
     "noImplicitAny": false,
     "downlevelIteration": true,
-    "jsx": "react"
+    "jsx": "preserve"
   },
   "include": [
     "src"
