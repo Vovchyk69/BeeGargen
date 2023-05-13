@@ -46,8 +46,8 @@ app.disable("x-powered-by");
 
 app.use("/api", require("./routes"));
 
-app.all("*", async (req, res) => {
-  return res.status(404).send("Page could not be found");
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname+'../frontend/dist'));
 });
 
 const port = process.env.PORT;
