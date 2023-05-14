@@ -4,7 +4,7 @@ on: push
 
 env:
   CI: false
-  
+
 jobs:
   Run-Code-Coverage:
     runs-on: ubuntu-latest
@@ -29,6 +29,11 @@ jobs:
           cd frontend/
           npm run test
           
+      - name: Run tests
+        run: |
+          cd frontend/
+          npm run test:coverage
+
       - name: Upload coverage report
         uses: codecov/codecov-action@v1
         with:
