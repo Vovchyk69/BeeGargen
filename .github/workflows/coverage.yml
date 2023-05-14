@@ -2,6 +2,9 @@ name: Coverage
 
 on: push
 
+env:
+  CI: false
+  
 jobs:
   Run-Code-Coverage:
     runs-on: ubuntu-latest
