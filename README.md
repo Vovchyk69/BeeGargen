@@ -1,6 +1,6 @@
 # Heard
 [![Build and Deploy](https://github.com/Vovchyk69/BeeGargen/actions/workflows/ci.yml/badge.svg?branch=dev-ci)](https://github.com/Vovchyk69/BeeGargen/actions/workflows/ci.yml)
-[![Coverage](https://github.com/Vovchyk69/BeeGargen/actions/workflows/coverage.yml/badge.svg?branch=dev-ci)](https://github.com/Vovchyk69/BeeGargen/actions/workflows/coverage.yml)
+[![Tests](https://github.com/Vovchyk69/BeeGargen/actions/workflows/coverage.yml/badge.svg?branch=dev-ci)](https://github.com/Vovchyk69/BeeGargen/actions/workflows/coverage.yml)
 [![codecov](https://codecov.io/gh/Vovchyk69/BeeGargen/branch/dev-ci/graph/badge.svg?token=DX0HIAR97U)](https://codecov.io/gh/Vovchyk69/BeeGargen)
 ## Team
 - Oleksii Pasternak (*oleksijpasternak*)- PM and partially BA, team's motivator. Workproducts: Project Plan, Wireframes and Prototypes 
