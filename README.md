@@ -1,6 +1,6 @@
 # Heard
 [![Build and Deploy](https://github.com/Vovchyk69/BeeGargen/actions/workflows/ci.yml/badge.svg?branch=dev-ci)](https://github.com/Vovchyk69/BeeGargen/actions/workflows/ci.yml)
-
+[![Coverage](https://github.com/Vovchyk69/BeeGargen/actions/workflows/coverage.yml/badge.svg?branch=dev-ci)](https://github.com/Vovchyk69/BeeGargen/actions/workflows/coverage.yml)
 ## Team
 - Oleksii Pasternak (*oleksijpasternak*)- PM and partially BA, team's motivator. Workproducts: Project Plan, Wireframes and Prototypes 
 - Anna Pavliuk (*annpvk*) - QA. Workproducts: Functional, non-funtional test cases, Smoke suite, defect reports.
