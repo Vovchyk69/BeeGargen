@@ -1,6 +1,5 @@
 import React from "react";
 import { Button, Slider } from "antd";
-import { SliderValue } from "antd/lib/slider";
 import {
   CaretRightOutlined,
   PauseOutlined,
@@ -13,7 +12,7 @@ export type BigPanelProps = {
   current: number;
   duration: number;
   onTogglePlay(isPlay: boolean): void;
-  onChangeTime(time: SliderValue): void;
+  onChangeTime(time: any): void;
 };
 
 const BigPanel: React.FC<BigPanelProps> = ({
