@@ -15,7 +15,8 @@
     "build": "react-app-rewired build",
     "start-build": "http-server ./build",
     "eject": "react-app-rewired eject",
-    "test": "react-app-rewired test --env=jsdom"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@ant-design/icons": "^4.1.0",

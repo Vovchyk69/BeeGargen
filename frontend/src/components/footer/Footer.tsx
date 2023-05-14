@@ -7,7 +7,6 @@ import {
   ProfileOutlined,
   MedicineBoxOutlined
 } from "@ant-design/icons";
-import "./Footer.less";
 
 type Props = RouteComponentProps & {
   className?: string;
