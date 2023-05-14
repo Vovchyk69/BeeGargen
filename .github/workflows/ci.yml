@@ -10,7 +10,7 @@ on:
       - dev-ci
 
 jobs:
-  build-and-deploy:
+  build-and-test:
     runs-on: ubuntu-latest
 
     steps:
@@ -36,6 +36,11 @@ jobs:
       - name: Test Deployment
         run: npm run test
 
+  deploy:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Deploy 
         uses: akhileshns/heroku-deploy@v3.12.12
         with:
