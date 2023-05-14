@@ -14,7 +14,8 @@
     "start-js": "react-app-rewired start",
     "build": "react-app-rewired build",
     "start-build": "http-server ./build",
-    "eject": "react-app-rewired eject"
+    "eject": "react-app-rewired eject",
+    "test": "react-app-rewired test --env=jsdom"
   },
   "dependencies": {
     "@ant-design/icons": "^4.1.0",
@@ -35,7 +36,10 @@
     "axios": "^0.18.0",
     "classnames": "^2.2.6",
     "connected-react-router": "^6.5.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.7",
     "history": "^4.9.0",
+    "jest": "^24.9.0",
     "lodash": "^4.17.15",
     "moment": "^2.26.0",
     "query-string": "^6.12.1",
